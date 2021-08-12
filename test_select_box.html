@@ -21,6 +21,62 @@
 <p>Click the "Submit" button and the form-data will be sent to a page on the 
 server called "action_page.php".</p>
 
+
+<h2>JavaScript Alert</h2>
+
+<button onclick="myAlertFunction()">alert - try it</button>
+
+<script>
+function myAlertFunction() {
+  alert("I am an alert box!");
+}
+</script>
+
+<h2>JavaScript Confirm Box</h2>
+
+
+<button onclick="myConfirmFunction()">Try confirm it</button>
+
+<p id="demo"></p>
+
+<script>
+function myConfirmFunction() {
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+<h2>JavaScript Prompt</h2>
+
+<button onclick="myPromptFunction()">Try prompt it</button>
+
+<p id="demo"></p>
+
+<script>
+function myPromptFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+<label for="avatar">File picker:</label>
+
+<input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+
+
 </body>
 </html>
 
